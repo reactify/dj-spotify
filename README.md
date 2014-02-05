@@ -45,7 +45,7 @@ Finally, if you would like to control Ableton Live with a custom DJing template 
 Start audio playing on your main and virtual machines, and, in Live, you should now see audio from your main machine coming in on Track 1, and audio from your virtual machine coming in on Track 2
 
 ### Automated key and BPM retreival from Echonest
-Unless otherwise stated, the following steps must be performed on both your main and virtual machines.
+Unless otherwise stated, the following steps must be performed on both your main and virtual machines:
 7. Open Growl and place the Rules.scpt file in the following path: 
 /Users/[username]/Library/Application Scripts/com.Growl.GrowlHelperApp/
 Growl should run this AppleScript every time it receives a notification, so we use it to automatically launch the getTempoAndKey.py Python script which, in turn, queries Spotify for it's currently playing track, retreives the Key/BPM/Mode data for that track from EchoNest, and sends that information over OSC
