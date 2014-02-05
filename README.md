@@ -45,7 +45,7 @@ Finally, if you would like to control Ableton Live with a custom DJing template 
 Start audio playing on your main and virtual machines, and, in Live, you should now see audio from your main machine coming in on Track 1, and audio from your virtual machine coming in on Track 2
 
 #### Automated key and BPM retreival from Echonest
-Unless otherwise stated, the following steps must be performed on both your main and virtual machines:
+Unless otherwise stated, the following steps must be performed on both your main and virtual machines
 1. Open Growl and place the Rules.scpt file in the following path:
     
     /Users/[username]/Library/Application Scripts/com.Growl.GrowlHelperApp/
@@ -57,10 +57,8 @@ Unless otherwise stated, the following steps must be performed on both your main
 5. On your main machine, change the port number on line 4 of getTempoAndKey.py to 8070, and to 8090 on the virtual machine
 6. In Live on your main machine, check that the key and BPM data is coming through to the Stream-Pitch Max For Live devices on tracks 1 and 2
 
-Now, go and pour yourself a beer because you deserve it for getting this far. Tweet us at [@reactify](www.twitter.com/reactify) if you do because I would like to personally congratulate you.
-
 #### Extra brownie points - controlling Live
-Now that you've got all the audio coming in to Live, you could make MIDI mappings to any hardware controller you happen to have lying around. If you would like to use the TouchOSC layout I made for iPad, put your beer down and follow these steps:
+Now that you've got all the audio coming in to Live, you could make MIDI mappings to any hardware controller you happen to have lying around. If you would like to use the TouchOSC layout I made for iPad, follow these steps
 1. Set-up TouchOSC to communicate with your main machine. [Instructions here](http://hexler.net/docs/touchosc-configuration)
 2. Open TouchOSC Editor and sync the Max DJ.touchosc layout on to your iPad [Instructions here](http://hexler.net/docs/touchosc-editor-sync)
 3. With any luck, all the MIDI mappings should still be present in Live, but if they're not, remake them
@@ -68,3 +66,6 @@ Now that you've got all the audio coming in to Live, you could make MIDI mapping
 #### Even more extra brownie points - displaying arist, title and BPM information in TouchOSC
 The Live template also has the capacity to talk back to the TouchOSC layout so that it can display the aritst, title and BPM information of the currently playing tracks. To get this working:
 1. In the Master track in Live, open the Master-tempo-send Max For Live device and change the IP address and port number to those of your iPad. Again, see [here](http://hexler.net/docs/touchosc-configuration) for instructions on where to find those
+
+#### Beer time!
+Now, go and pour yourself a tasty beverage because you deserve it for getting this far. Tweet us at [@reactify](www.twitter.com/reactify) if you do because I would like to personally congratulate you (on getting this far, not pouring yourself a tasty beverage...)
