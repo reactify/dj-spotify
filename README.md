@@ -45,7 +45,8 @@ Finally, if you would like to control Ableton Live with a custom DJing template 
 3. On your main machine start SoundFlower and set the system audio output to be SoundFlower (64ch) in your System Preferences
 4. Set the audio output of Parallels (note: *not* the system output of your virtual machine, but of the virtual machine hosting software itself) to be SoundFlower (2ch)
 5. Open Soundflower-re-route.pd and set Pd's input device to be SoundFlower (2ch) and it's output to be SoundFlower (64ch)
-6. Start Live Template.als in Ableton Live and set the audio input of Live to by SoundFlower (64ch). Set the audio output to be whatever you want e.g. Built-in Output or an external soundcard
+6. Start Live Template.als in Ableton Live and set the audio input of Live to by SoundFlower (64ch). Set the audio output to be whatever you want e.g. Built-in Output or an external soundcard.
+
 Start audio playing on your main and virtual machines, and, in Live, you should now see audio from your main machine coming in on Track 1, and audio from your virtual machine coming in on Track 2
 
 #### Automated key and BPM retreival from Echonest
@@ -75,8 +76,8 @@ The Live template also has the capacity to talk back to the TouchOSC layout so t
 
 1. In the Master track in Live, open the Master-tempo-send Max For Live device and change the IP address and port number to those of your iPad. Again, see [here](http://hexler.net/docs/touchosc-configuration) for instructions on where to find those
 
-### Beer time!
-Now, go and pour yourself a tasty beverage because you deserve it for getting this far. Tweet us at [@reactify](www.twitter.com/reactify) if you do because I would like to personally congratulate you (on getting this far, not pouring yourself a tasty beverage...)
+## Beer time!
+Now, go and pour yourself a tasty beverage because you deserve it for getting this far. Tweet us at [@reactify](http://www.twitter.com/reactify) if you do because I would like to personally congratulate you (on getting this far, not pouring yourself a tasty beverage...)
 
 ### Legal stuff
 Copyright (c) 2014 Reactify Music LLP
