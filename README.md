@@ -46,11 +46,8 @@ Start audio playing on your main and virtual machines, and, in Live, you should 
 
 #### Automated key and BPM retreival from Echonest
 Unless otherwise stated, the following steps must be performed on both your main and virtual machines
-1. Open Growl and place the Rules.scpt file in the following path:
-    
-    /Users/[username]/Library/Application Scripts/com.Growl.GrowlHelperApp/
-    
-    Growl should run this AppleScript every time it receives a notification, so we use it to automatically launch the getTempoAndKey.py Python script which, in turn, queries Spotify for it's currently playing track, retreives the Key/BPM/Mode data for that track from EchoNest, and sends that information over OSC
+1. Open Growl and place the Rules.scpt file in the following path: /Users/[username]/Library/Application Scripts/com.Growl.GrowlHelperApp/
+	Growl should run this AppleScript every time it receives a notification, so we use it to automatically launch the getTempoAndKey.py Python script which, in turn, queries Spotify for it's currently playing track, retreives the Key/BPM/Mode data for that track from EchoNest, and sends that information over OSC
 2. Check that Growl is running the AppleScript by uncommenting the 'say "hello"' line in the Rules.scpt. Try skipping tracks in Spotify. If your machine says 'Hello', then you're good to go
 3. In Rules.scpt change the path to the getTempoAndKey.py file to wherever you have it saved
 4. In getTempoAndKey.py change the EchoNest API Key on line 7 to your own one. Go [here](http://developer.echonest.com/) if you need to get an EchoNest API Key.
@@ -69,3 +66,24 @@ The Live template also has the capacity to talk back to the TouchOSC layout so t
 
 #### Beer time!
 Now, go and pour yourself a tasty beverage because you deserve it for getting this far. Tweet us at [@reactify](www.twitter.com/reactify) if you do because I would like to personally congratulate you (on getting this far, not pouring yourself a tasty beverage...)
+
+#### Legal stuff
+Copyright (c) [2014] [Yuli Levtov]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
