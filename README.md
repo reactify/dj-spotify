@@ -4,10 +4,15 @@ Allows you to DJ using streamed content. Hacked together at MIDEM Music Hack Day
 
 Here's the hack in action: [http://www.youtube.com/watch?v=uTgwAMZiwMw](http://www.youtube.com/watch?v=uTgwAMZiwMw)
 
-## How it works
+### How it works
 This system relies on a virtual machine (Parallels in my hack's case) to play a second Spotify stream. The two streams are then sent into individual tracks in Ableton Live, each with a Max For Live patch which reads the Spotify streams into internal buffers which can then be sped up or slowed down at will, effectively allowing you to beat-match and, theoretically, do a whole DJ with streamed content. 
 
-## Components and required software
+### Disclaimer
+This hack is incredibly impractical. It requires lots of different bits of software to each perform seemingly innocuous tasks, but every singly task is critical to the system working. If anyone can think of any ways to streamline this process, please do let me know. Needless to say, this implementation is OS X only, but it would definitely be possible on Windows, as well.
+
+I do not have any intention to maintain or update this code. I am simply posting it here for prosperity and for tinkerers who are interested in how this was achieved. That said...
+
+### Components and required software
 ![DJ Spotify topology](http://reactifymusic.com/wp-content/uploads/2014/02/DJ-Spotify-diagram-1.jpg)
 The above is a diagram of how the hack works. As you can see it's a complete spider's web of messy hacks involving most components of the OS.
 
@@ -33,7 +38,7 @@ If you choose to use Spotify and would like to display key and BPM information a
 Finally, if you would like to control Ableton Live with a custom DJing template on the iPad, install TouchOSC on your iPad:
 - [TouchOSC](http://hexler.net/software/touchosc)
 
-## Method
+### Method
 #### Two audio streams
 1. On your main machine, install all of the above software and start Spotify
 2. On your virtual machine, install Spotify and, if desired, Growl, pyechonest, appscript and pyOSC
@@ -56,11 +61,14 @@ Unless otherwise stated, the following steps must be performed on both your main
 6. In Live on your main machine, check that the key and BPM data is coming through to the Stream-Pitch Max For Live devices on tracks 1 and 2
 
 #### Extra brownie points - controlling Live
-Now that you've got all the audio coming in to Live, you could make MIDI mappings to any hardware controller you happen to have lying around. If you would like to use the TouchOSC layout I made for iPad, follow these steps
+Now that you've got all the audio coming in to Live, you could make MIDI mappings to any hardware controller you happen to have lying around. If you would like to use the TouchOSC layout I made for iPad, follow these steps:
 
 1. Set-up TouchOSC to communicate with your main machine. [Instructions here](http://hexler.net/docs/touchosc-configuration)
 2. Open TouchOSC Editor and sync the Max DJ.touchosc layout on to your iPad [Instructions here](http://hexler.net/docs/touchosc-editor-sync)
-3. With any luck, all the MIDI mappings should still be present in Live, but if they're not, remake them
+3. Open TouchOSC on your iPad
+4. Open the Audio MIDI Setup app (Spotlight it) and open the MIDI Window (⌘+2)
+5. Double-click the Network window and you should see the name of your iPad in the Directory panel on the left hand side. Click on it and click 'Connect' below the panel
+6. Open the Max DJ layout on your iPad and go back into Live. With any luck, all the MIDI mappings should still be present in Live, but if they're not, remake them
 
 #### Even more extra brownie points - displaying arist, title and BPM information in TouchOSC
 The Live template also has the capacity to talk back to the TouchOSC layout so that it can display the aritst, title and BPM information of the currently playing tracks. To get this working:
