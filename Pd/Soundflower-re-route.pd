@@ -1,0 +1,7 @@
+#N canvas 1 165 391 90 10;
+#X obj 24 23 adc~;
+#X obj 24 54 dac~ 3 4;
+#X text 89 52 // Out to channels 3-4 of Soundflower (64ch);
+#X text 89 21 // In from Soundflower (2ch);
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
