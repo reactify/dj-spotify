@@ -46,6 +46,7 @@ Start audio playing on your main and virtual machines, and, in Live, you should 
 
 #### Automated key and BPM retreival from Echonest
 Unless otherwise stated, the following steps must be performed on both your main and virtual machines
+
 1. Open Growl and place the Rules.scpt file in the following path: 
 	"/Users/[username]/Library/Application Scripts/com.Growl.GrowlHelperApp/"
 	Growl should run this AppleScript every time it receives a notification, so we use it to automatically launch the getTempoAndKey.py Python script which, in turn, queries Spotify for it's currently playing track, retreives the Key/BPM/Mode data for that track from EchoNest, and sends that information over OSC
@@ -57,12 +58,14 @@ Unless otherwise stated, the following steps must be performed on both your main
 
 #### Extra brownie points - controlling Live
 Now that you've got all the audio coming in to Live, you could make MIDI mappings to any hardware controller you happen to have lying around. If you would like to use the TouchOSC layout I made for iPad, follow these steps
+
 1. Set-up TouchOSC to communicate with your main machine. [Instructions here](http://hexler.net/docs/touchosc-configuration)
 2. Open TouchOSC Editor and sync the Max DJ.touchosc layout on to your iPad [Instructions here](http://hexler.net/docs/touchosc-editor-sync)
 3. With any luck, all the MIDI mappings should still be present in Live, but if they're not, remake them
 
 #### Even more extra brownie points - displaying arist, title and BPM information in TouchOSC
 The Live template also has the capacity to talk back to the TouchOSC layout so that it can display the aritst, title and BPM information of the currently playing tracks. To get this working:
+
 1. In the Master track in Live, open the Master-tempo-send Max For Live device and change the IP address and port number to those of your iPad. Again, see [here](http://hexler.net/docs/touchosc-configuration) for instructions on where to find those
 
 #### Beer time!
