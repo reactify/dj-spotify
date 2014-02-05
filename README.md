@@ -46,7 +46,8 @@ Start audio playing on your main and virtual machines, and, in Live, you should 
 
 #### Automated key and BPM retreival from Echonest
 Unless otherwise stated, the following steps must be performed on both your main and virtual machines
-1. Open Growl and place the Rules.scpt file in the following path: /Users/[username]/Library/Application Scripts/com.Growl.GrowlHelperApp/
+1. Open Growl and place the Rules.scpt file in the following path: 
+	"/Users/[username]/Library/Application Scripts/com.Growl.GrowlHelperApp/"
 	Growl should run this AppleScript every time it receives a notification, so we use it to automatically launch the getTempoAndKey.py Python script which, in turn, queries Spotify for it's currently playing track, retreives the Key/BPM/Mode data for that track from EchoNest, and sends that information over OSC
 2. Check that Growl is running the AppleScript by uncommenting the 'say "hello"' line in the Rules.scpt. Try skipping tracks in Spotify. If your machine says 'Hello', then you're good to go
 3. In Rules.scpt change the path to the getTempoAndKey.py file to wherever you have it saved
